@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Website</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Abel&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Merriweather:wght@400;700&family=Oswald:wght@400;700&family=Barlow:wght@400;700&family=Assistant:wght@400;700&family=Urbanist:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Source Sans Pro, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			text-align:center;
+        }
+
+		.logo {
+		  font-size: 1.5em;
+		  font-weight: bold;
+		  min-width:120px;
+		}
+		
+		#logo {
+			height:200px;
+			align:center;
+		}
+		
+		h1, h2, h3 {
+			color:#fff;
+		}
+		
+		h1 {
+			font-family:lato;
+			font-size:40px;
+		}
+		
+		h2 {
+			font-family:roboto;
+			font-size:30px;
+			opacity:0.7;
+		}
+		
+		h3 {
+			font-family:abel;
+			font-size:30px;
+		}
+
+        .jumbotron-webpage {
+            background-image: url('./imgs/splash.png'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+			background-repeat: no-repeat;
+            height: 800px;
+			text-align: center; /* Center-align text */
+			padding-top:250px;
+        }
+		
+		.jumbotron-webpage h1 {
+			opacity:0.7;
+		}
+		
+		.jumbotron-webpage h2 {
+			opacity:0.7;
+			text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+		}
+
+        header {
+            background-color: #000;
+            text-align: center;
+			height:40px;
+        }
+		
+        header h2{
+            font-family:Urbanist;
+			font-weight:400;
+			color:#aaa;
+        }
+
+
+        .main-content {
+            padding: 0px;
+			width:100%;
+            margin: 0 auto;
+			color:#ddd;
+        }
+		
+		section {
+			width:100%;
+		}
+		
+		.container {
+			padding: 20px;
+		    max-width: 1200px;
+			margin: 0 auto;
+		}
+
+        .image-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 20px 0;
+			padding-top:50px;
+        }
+		
+        .single-column-section-webpage p {
+            width: 100%;
+			text-align:justify;
+			margin-bottom:20px;
+			font-size:20px;
+        }
+		
+		.single-column-section-webpage {
+			text-align:center;
+		}
+		
+		.single-column-section-webpage img {
+			max-width:100%;
+		}
+		
+        .two-column-section-webpage {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+			font-size:20px;
+        }
+
+        .two-column-section-webpage div {
+            width: calc(50% - 20px);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+		
+		.justify_left {
+			text-align:left;
+		}
+		
+		.justify_right {
+			text-align:right;
+		}
+		
+		.float-left {
+			float:left;
+		}
+		
+		.float-right {
+			float:right;
+		}
+		
+        .three-column-section {
+            padding: 50px 20px;
+            text-align: left;
+        }
+		
+		.three-column-section h3 {
+			text-align: center;
+		}
+
+        .column {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .column img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .column h3 {
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 18px;
+        }
+		
+		#section-main-concourse img {
+			width:100%;
+		}
+		
+		#section-side-concourse .column {
+			max-width:800px;
+		}
+		
+		#section-cafeteria .column {
+			max-width:800px;
+		}
+		
+        .footer-image {
+            background-image: url('./imgs/design/building2.jpg'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+			background-repeat: no-repeat;
+            height: 100px;
+			text-align: center; /* Center-align text */
+			margin-top:100px;
+        }
+
+        @media (min-width: 768px) {
+            .three-column-section {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .column {
+                width: calc(33.33% - 20px);
+                margin-bottom: 20px;
+            }
+        }
+		
+		footer {
+			background-color: #000;
+			padding: 20px;
+			color: #fff;
+			text-align: center;
+		}
+		
+		.footer-logos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			border-bottom:2px dotted #333;
+			margin-top:20px;
+			margin-bottom:40px;
+			align-items: center;
+		}
+		
+		.footer-logos a img {
+			filter: grayscale(100%);
+		}
+		
+		.footer-links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.footer-column {
+			flex: 1;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		footer a {
+			color: #fff;
+			text-decoration: none;
+			display: block;
+			margin-bottom: 8px;
+		}
+
+		.social-icons {
+			margin-top: 0px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+		.small-logo {
+			height:100px;
+			margin-top:0px;
+		}
+
+		@media (max-width: 768px) {
+			.footer-links {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.footer-column {
+				flex: 1;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+    </style>
+</head>
+<body>
+	<img id="logo" src="./imgs/logo.png" alt="logo">
+
+    <div class="jumbotron-webpage">
+    </div>
+
+    <header>
+        <h2>Conquer the dark, unveil the secrets.</h2>
+    </header>
+
+    <div class="main-content">
+	    <section class="single-column-section-webpage">
+			<div class="container">
+				<h3>What Lies Beneath the Dungeons</h3>
+				<p>Embark on a thrilling adventure as you navigate dark, winding dungeons filled with lurking dangers. Armed with your wits and a variety of weapons, confront giant spiders, cunning wizards, and other fearsome creatures blocking your path. Explore hidden chambers and secret passages to uncover powerful items and enchanted weapons to aid you in your quest. Face challenging puzzles and dangerous traps as you descend deeper into the dungeon's depths. Will you have the courage and skill to conquer the shadows of Arachnia and uncover the dungeon's ultimate secrets?</p>
+			</div>
+        </section>
+	
+
+		<section class="image-section">
+			<div class="container">
+				<img src="./imgs/adventure.jpg" alt="Section Image"> <!-- Add your image URL here -->
+				<h2 class="section-title">Your Adventure</h2>
+				
+				<div class="two-column-section-webpage">
+					<div class="justify_right">
+						<p>You are Liora Valerius, a skilled and fearless adventurer with a mysterious past. You grew up in a small village nestled in the foothills of a rugged mountain range, where tales of legendary quests and ancient treasures hidden deep within the dungeons of Arachnia captivated your imagination. Your parents, both accomplished hunters, taught you to wield a blade and bow from a young age, instilling in you a fierce sense of determination and survival skills. As you grew older, your curiosity and desire for adventure took you far beyond your village, earning you a reputation for your daring exploits and uncanny ability to navigate treacherous terrain.</p>
+					</div>
+					<div class="justify_left">
+						<p>Your journey to the dungeons of Arachnia is driven by a personal quest. Years ago, your younger brother went missing during an expedition into the dark dungeons, and you have been haunted by his absence ever since. Determined to uncover the truth and find any trace of him, you set out on this perilous adventure armed with your trusty sword, a crossbow, and a satchel of enchanted artifacts collected from your past adventures. As you delve into the shadows, you must face not only the dangers lurking within the dungeons but also your own fears and doubts. With courage and resilience, you aim to conquer the trials of Arachnia and bring closure to your long-awaited quest.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		
+
+		<section id="building-places">
+			<div class="container three-column-section">
+				<div class="column">
+					<img src="./imgs/spider.jpg" alt="Image 1"> <!-- Add your image URL here -->
+					<h3>The Spider Lair</h3>
+					<p>A haunting and eerie expanse deep within the dungeon's heart. Shrouded in thick webs that hang from the stone walls and ceilings, the lair is home to a colony of giant, venomous spiders. The floor is littered with the remnants of past adventurers, their weapons and belongings ensnared in sticky threads. Navigating the lair requires keen senses and agility, as hidden traps and ambushes by the spiders threaten to ensnare the unwary traveler.</p>
+
+					<p>As you venture deeper, the lair's atmosphere grows colder and more oppressive. Echoes of skittering legs resonate in the shadows, making each step a test of nerve. At the heart of the lair lies the Spider Queen, a colossal and cunning adversary guarding a treasure trove of enchanted items. Confronting the Spider Queen will be a daunting challenge, but triumph brings the reward of valuable loot and passage deeper into the dungeon's secrets.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/wizard.jpg" alt="Image 2"> <!-- Add your image URL here -->
+					<h3>The Wizard</h3>
+					<p>A powerful wizard who guards a treasure trove of ancient artifacts and enchanted items deep within the dungeon. Cloaked in a flowing robe that shifts in color and pattern, the wizard wields immense magical power, using it to create barriers, illusions, and devastating spells to protect the treasure from intruders. The chamber where the wizard resides is adorned with mystical symbols and glowing runes, hinting at the complex magic at work within the lair.</p>
+
+					<p>As you enter the wizard's domain, you must be prepared for a formidable duel. The Arcane Guardian possesses an array of elemental spells and arcane tricks, summoning elementals and manipulating the environment to disorient you. To succeed, you must outwit the wizard's strategies, using your own skills and weapons wisely. Defeating the Arcane Guardian is a feat of mastery, granting you access to the coveted treasure and unlocking secrets that can aid you on your journey through the dungeon's depths.</p>
+				</div>
+
+				<div class="column">
+					<img src="./imgs/treasure.jpg" alt="Image 3"> <!-- Add your image URL here -->
+					<h3>The Vault</h3>
+					<p>A breathtaking sight, hidden deep within the dungeon and guarded by the Arcane Guardian. As you approach the room, the air grows thick with a sense of anticipation and ancient magic. The chamber's walls are adorned with intricate carvings depicting long-lost legends and mystical symbols. The floors are polished stone, reflecting the soft, ethereal glow that emanates from the treasure within.</p>
+
+					<p>In the center of the room stands a large, ornate chest, flanked by smaller chests and scattered piles of gold coins, shimmering jewels, and enchanted artifacts. Ancient weapons and armor, each with its own unique enchantment, lie in wait for a worthy hero to claim them. Scrolls and tomes containing forgotten spells and secrets rest on pedestals, offering valuable knowledge to those who can unlock their mysteries.</p>
+
+					<p>The Treasure Room is a place of wonder and danger, as traps may still linger to protect its precious contents. Your journey to reach this room is rewarded with a wealth of loot and secrets, but you must remain vigilant as you explore its depths and claim the treasures within.</p>
+				</div>
+			</div>
+		</section>
+		
+
+	
+	<footer>
+		<div class="footer-links">
+			<div class="footer-column social-icons">
+				<a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+				<a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+				<a href="#" target="_blank" title="Instagram"><i class="fab fa-whatsapp"></i></a>
+			</div>
+			<div class="footer-column">
+				<img src="./imgs/logo.png" alt="Small Logo" class="small-logo">
+			</div>
+			<div class="footer-column">
+				
+			</div>
+		</div>
+		<p>&copy; Copyright Psyblade 2024. All Rights Reserved</p>
+		
+	</footer>
+
+    <!-- Font Awesome icons (you can include this in your project or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</body>
+</html>
